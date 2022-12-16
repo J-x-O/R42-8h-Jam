@@ -9,6 +9,7 @@ namespace Gameplay.Blocks {
     public abstract class Line : MonoBehaviour {
 
         public event Action OnAnyClick;
+        public event Action<Block> OnAnyBlockDied;
         
         public event Action<Block> OnBlockClicked;
         public event Action<Block> OnBlockMissed;
@@ -32,6 +33,7 @@ namespace Gameplay.Blocks {
         }
 
         private void StopBlock(Block target, bool result = false) {
+            OnAnyBlockDied.TryInvoke(target);
             _runningBlocks.Remove(target);
             target.StopBlock(result);
         }
