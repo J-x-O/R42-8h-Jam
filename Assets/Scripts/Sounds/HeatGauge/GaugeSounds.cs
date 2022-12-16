@@ -13,11 +13,7 @@ namespace Sounds.HeatGauge {
         [SerializeField] private SFXAudioEvent _heat;
         [SerializeField] private SFXAudioEvent _sweetSpot;
 
-        private AudioSource _audioSource;
-
-        private void Start() {
-            _audioSource = GetComponent<AudioSource>();
-        }
+        [SerializeField] private SFXManager _manager;
 
         private void OnEnable() {
             _heatManager.Freezing.OnValueChanged += PlayFreeze;
@@ -32,15 +28,15 @@ namespace Sounds.HeatGauge {
         }
 
         private void PlayFreeze(bool start) {
-            if(start) _freeze.Play(_audioSource);
+            if(start) _manager.PlaySFX(_freeze);
         }
         
         private void PlayHeat(bool start) {
-            if(start) _heat.Play(_audioSource);
+            if(start) _manager.PlaySFX(_heat);
         }
         
         private void PlaySweetspot() {
-            _sweetSpot.Play(_audioSource);
+            _manager.PlaySFX(_sweetSpot);
         }
     }
 
