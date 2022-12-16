@@ -12,16 +12,22 @@ namespace Gameplay {
         public event Action OnSweetSpotRestored;
         public event Action OnSweetSpotLost;
         
-        public float Heat { get; private set; }
+        //public float Heat { get; private set; }
         public readonly ObservableBool SweetSpot = true;
         public readonly ObservableBool Freezing = true;
         public readonly ObservableBool Overheating = true;
         
         [SerializeField] private float _lowestValue;
-        [SerializeField] private float _lowSweetSpot;
-        [SerializeField] private float _highSweetSpot;
-        [SerializeField] private float _highestValue;
+        public float LowestValue => _lowestValue;
+        [SerializeField] private float _lowSweetSpot = 40;
+        [SerializeField] private float _highSweetSpot = 60;
+        [SerializeField] private float _highestValue = 100;
+        public float HighestValue => _highestValue;
 
+        /// <summary>
+        /// delete
+        /// </summary>
+        public float Heat;
         
         public event Action OnDeath;
         public float Troubelometer { get; private set; }
