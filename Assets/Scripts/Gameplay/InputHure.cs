@@ -17,6 +17,11 @@ namespace Gameplay {
             if(Input.GetKeyDown("d")) _right.Click();
             if(Input.GetKeyDown("s")) _bot.Click();
             if(Input.GetKeyDown("a")) _left.Click();
+
+            if (Input.GetKeyDown(KeyCode.UpArrow)) _top.Click();
+            if (Input.GetKeyDown(KeyCode.RightArrow)) _right.Click();
+            if (Input.GetKeyDown(KeyCode.DownArrow)) _bot.Click();
+            if (Input.GetKeyDown(KeyCode.LeftArrow)) _left.Click();
             
             if(Input.GetKeyDown("space")) _manager.HeatUp(_spaceIncrement);
         }
