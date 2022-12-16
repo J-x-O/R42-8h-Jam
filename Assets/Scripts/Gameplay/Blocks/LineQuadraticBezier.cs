@@ -21,6 +21,8 @@ namespace Gameplay.Blocks {
         }
 
         private void OnDrawGizmos() {
+            if(_start == null || _middle == null || _end == null) return;
+            Gizmos.color = Color.black;
             Vector3 lastPosition = _start.transform.position;
             const float stepSize = 0.1f;
             for (float progress = stepSize; progress < 1.01f; progress += stepSize) {
