@@ -25,6 +25,7 @@ namespace Gameplay.Timeline {
             float startTime = 0;
             if (_director.playableAsset is TimelineAsset asset) {
                 try {
+                    TrackAsset blockTrack = asset.GetOutputTrack(0);
                     TrackAsset audioTrack = asset.GetOutputTrack(1);
                     TimelineClip first = audioTrack.GetClips().FirstOrDefault();
                     startTime = (float) first.start;

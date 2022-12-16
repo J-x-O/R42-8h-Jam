@@ -14,10 +14,11 @@ namespace Gameplay.Blocks {
         [SerializeField] private BlockType _type;
 
         public float Progress { get; private set; }
-        public float ProgressPercent => Progress / _data.LineDuration;
-        
-        [SerializeField] private BlockData _data;
+        public float ProgressPercent => Progress / AppearTime;
 
+        private float AppearTime => LevelAsset.GetAppearTime();
+        private float HitWindow => LevelAsset.GetHitWindow();
+        private AnimationCurve SuccessCurve => LevelAsset.GetSuccessCurve();
         private Coroutine _routine;
         
         public void RunBlock(Line target, Action onFinished) {
@@ -27,9 +28,9 @@ namespace Gameplay.Blocks {
         private IEnumerator MoveBlock(Line target, Action onFinished) {
             Progress = 0;
             
-            while (Progress < _data.LineDuration + _data.HitWindow / 2) {
+            while (Progress < AppearTime + HitWindow / 2) {
                 Progress += Time.deltaTime;
-                transform.position = target.EvaluatePosition(Mathf.Clamp01(Progress / _data.LineDuration));
+                transform.position = target.EvaluatePosition(Mathf.Clamp01(Progress / AppearTime));
                 yield return null;
             }
             onFinished.TryInvoke();
@@ -43,12 +44,13 @@ namespace Gameplay.Blocks {
 
 
         public bool IsClickable() {
-            return IsBetween(Progress - _data.LineDuration, -_data.HitWindow / 2, +_data.HitWindow / 2);
+            
+            return IsBetween(Progress - AppearTime, - HitWindow / 2, + HitWindow / 2);
         }
 
         public float CalculateAccuracy() {
-            float accuracy01 = Mathf.Clamp01(Mathf.Abs(Progress - _data.LineDuration) / (_data.HitWindow / 2));
-            return _data.SuccessCurve.Evaluate(accuracy01);
+            float accuracy01 = Mathf.Clamp01(Mathf.Abs(Progress - AppearTime) / (HitWindow / 2));
+            return SuccessCurve.Evaluate(accuracy01);
         }
         
         private static bool IsBetween(float value, float lower, float higher) {

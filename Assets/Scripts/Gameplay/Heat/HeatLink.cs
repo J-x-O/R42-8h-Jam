@@ -7,7 +7,6 @@ namespace Gameplay {
     public class HeatLink : MonoBehaviour {
 
         [SerializeField] private HeatManager _manager;
-        [SerializeField] private BlockData _data;
         [SerializeField] private List<Line> _lines;
 
         private void OnEnable() {
@@ -24,8 +23,8 @@ namespace Gameplay {
 
         private void HandleBlockDeath(Block block) {
             switch (block.Type) {
-                case BlockType.Cold: _manager.Cooldown(_data.ColdAdd); break;
-                case BlockType.Hot: _manager.HeatUp(_data.HotAdd); break;
+                case BlockType.Cold: _manager.Cooldown(LevelAsset.GetColdAdd()); break;
+                case BlockType.Hot: _manager.HeatUp(LevelAsset.GetHotAdd()); break;
             }
         }
     }

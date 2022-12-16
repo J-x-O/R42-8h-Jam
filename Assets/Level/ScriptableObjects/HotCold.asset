@@ -9,21 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ceced076fab4deabbf8c9639ebbf291, type: 3}
-  m_Name: BlockData
+  m_Script: {fileID: 11500000, guid: 3e8cb72d4e494e79b031ac1c635789d6, type: 3}
+  m_Name: HotCold
   m_EditorClassIdentifier: 
-  _lineDuration: 2
-  _hitWindow: 0.4
+  _asset: {fileID: 11400000, guid: 1f5bbcfafc345d34d8947cfb0cf4c271, type: 2}
+  _audioTrack: {fileID: 11400000, guid: d09a584f9194ab84892aa174afb3672a, type: 2}
+  _appearTime: 2
+  _decayRate: 0.1
   _hotAdd: 0.1
   _coldAdd: 0.1
+  _hitWindow: 0.4
   _successCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0

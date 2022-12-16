@@ -14,20 +14,20 @@ namespace Gameplay.Blocks {
         public event Action<Block> OnBlockClicked;
         public event Action<Block> OnBlockMissed;
         public event Action<Block> OnBlockDied;
-        
-        [SerializeField] private BlockData _data;
-        [SerializeField] private HeatManager _manager;
 
         private readonly List<Block> _runningBlocks = new();
 
         private static event Action OnReset;
 
-        public static void ClearBlocks() {
-            OnReset.TryInvoke();
-        }
+        public static void ClearBlocks() => OnReset.TryInvoke();
 
-        private void OnEnable() {
-            
+        private void OnEnable() => OnReset += Reset;
+        private void OnDisable() => OnReset -= Reset;
+
+        private void Reset() {
+            while (_runningBlocks.Count > 0) {
+                StopBlock(_runningBlocks.FirstOrDefault());
+            }
         }
 
         public bool Click() {
