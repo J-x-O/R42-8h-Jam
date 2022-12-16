@@ -5,15 +5,12 @@ namespace Gameplay {
     public class ObservableBool {
 
         public bool Value { get; private set; }
-        public event Action OnValueChanged;
+        public event Action<bool> OnValueChanged;
 
         public void Set(bool newValue) {
             bool oldValue = Value;
             Value = newValue;
-            if (oldValue != newValue) {
-                if(newValue) OnValueChanged.TryInvoke();
-                else OnValueChanged.TryInvoke();
-            }
+            if (oldValue != newValue) OnValueChanged.TryInvoke(newValue);
         }
         
         private ObservableBool(bool b) {

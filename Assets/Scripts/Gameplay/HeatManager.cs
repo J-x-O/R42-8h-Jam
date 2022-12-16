@@ -5,10 +5,7 @@ using UnityEngine;
 
 namespace Gameplay {
     public class HeatManager : MonoBehaviour {
-
-        public event Action OnTooCold;
-        public event Action OnTooHot;
-        public event Action OnComfy;
+        
         public event Action OnSweetSpotRestored;
         public event Action OnSweetSpotLost;
         
@@ -22,20 +19,12 @@ namespace Gameplay {
         [SerializeField] private float _highSweetSpot;
         [SerializeField] private float _highestValue;
 
-        
         public event Action OnDeath;
         public float Troubelometer { get; private set; }
         [SerializeField] private float _troubleTolerance;
         [SerializeField] private float _troubleGainPerSecond;
         [SerializeField] private float _troubleDecayPerSecond;
         private Coroutine _deathRoutine;
-
-        public void OnValidate() {
-            _lowestValue = Mathf.Min(_lowestValue, 0, _lowSweetSpot);
-            _lowSweetSpot = Mathf.Clamp(_lowSweetSpot, _lowestValue, 0);
-            _highSweetSpot = Mathf.Clamp(_highSweetSpot, 0, _highSweetSpot);
-            _highestValue = Mathf.Max(_highestValue, 0, _highSweetSpot);
-        }
 
         public void HeatUp(float value) => SetHeat(Heat + value);
         public void Cooldown(float value) => SetHeat(Heat - value);
