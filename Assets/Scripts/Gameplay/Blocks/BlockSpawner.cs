@@ -6,6 +6,8 @@ using UnityEngine.Playables;
 
 namespace Gameplay.Blocks {
     public class BlockSpawner : MonoBehaviour, INotificationReceiver {
+
+        [SerializeField] private Transform _spawnTarget;
         
         [SerializeField] private Block _hotPrefab;
         [SerializeField] private Block _icePrefab;
@@ -19,8 +21,8 @@ namespace Gameplay.Blocks {
             if (notification is not BlockMarker marker) return;
             
             Block spawned = marker.BlockType switch {
-                BlockType.Cold => Instantiate(_icePrefab, transform),
-                BlockType.Hot => Instantiate(_hotPrefab, transform),
+                BlockType.Cold => Instantiate(_icePrefab, _spawnTarget),
+                BlockType.Hot => Instantiate(_hotPrefab, _spawnTarget),
                 _ => throw new ArgumentOutOfRangeException()
             };
             Line target = marker.Direction switch {

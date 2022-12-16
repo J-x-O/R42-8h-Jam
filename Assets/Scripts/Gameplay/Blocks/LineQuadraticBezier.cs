@@ -23,7 +23,7 @@ namespace Gameplay.Blocks {
         private void OnDrawGizmos() {
             Vector3 lastPosition = _start.transform.position;
             const float stepSize = 0.1f;
-            for (float progress = stepSize; progress < 1.1f; progress += stepSize) {
+            for (float progress = stepSize; progress < 1.01f; progress += stepSize) {
                 Vector3 newPosition = EvaluatePosition(progress);
                 Gizmos.DrawLine(lastPosition, newPosition);
                 lastPosition = newPosition;
