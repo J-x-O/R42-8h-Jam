@@ -19,8 +19,8 @@ namespace Gameplay.Blocks {
             if (notification is not BlockMarker marker) return;
             
             Block spawned = marker.BlockType switch {
-                BlockType.Cold => Instantiate(_icePrefab),
-                BlockType.Hot => Instantiate(_hotPrefab),
+                BlockType.Cold => Instantiate(_icePrefab, transform),
+                BlockType.Hot => Instantiate(_hotPrefab, transform),
                 _ => throw new ArgumentOutOfRangeException()
             };
             Line target = marker.Direction switch {

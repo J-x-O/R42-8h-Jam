@@ -17,7 +17,7 @@ namespace Gameplay.Blocks {
         [SerializeField] private BlockData _data;
         [SerializeField] private HeatManager _manager;
 
-        private List<Block> _runningBlocks;
+        private readonly List<Block> _runningBlocks = new();
 
         public bool Click() {
             OnAnyClick.TryInvoke();
