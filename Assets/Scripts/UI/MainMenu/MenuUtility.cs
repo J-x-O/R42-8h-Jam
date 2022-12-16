@@ -1,4 +1,5 @@
-﻿using Gameplay.Timeline;
+﻿using Gameplay;
+using Gameplay.Timeline;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
@@ -6,8 +7,8 @@ using UnityEngine.Timeline;
 namespace UI.MainMenu {
     public class MenuUtility : MonoBehaviour {
 
-        public void LoadLevel(TimelineAsset asset) {
-            TimelineManager.Map = asset;
+        public void LoadLevel(LevelAsset asset) {
+            LevelAsset.Current = asset;
             SceneManager.LoadScene("Level", LoadSceneMode.Single);
         }
         

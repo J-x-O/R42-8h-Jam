@@ -26,9 +26,8 @@ namespace UI.HeatGauge {
         }
 
         private void UpdateRotation() {
-            _indicator.rotation = Quaternion.Euler(Vector3.back * (_minDegree + ((
-                (_heatManager.Heat - _heatManager.LowestValue) * (_maxDegree - _minDegree)) / 
-                (_heatManager.HighestValue - _heatManager.LowestValue))));
+            _indicator.rotation = Quaternion.Euler(Vector3.back 
+                * Mathf.Lerp(_minDegree, _maxDegree, _heatManager.HeatPercent));
         }
 
         private void SickerShake() {
