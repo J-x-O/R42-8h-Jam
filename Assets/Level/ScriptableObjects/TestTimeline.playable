@@ -785,7 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 23.18181818181818
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &-4981255059343323414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 24.999999999999996
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &-4358910592983638580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -935,7 +935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 43.18181818181818
   BlockType: 1
-  Direction: 1
+  Direction: 2
 --- !u!114 &-3917695913928307818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 24.09090909090909
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &-3445892423759097457
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 34.090909090909086
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &-2609867298066530273
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 46.81818181818181
   BlockType: 1
-  Direction: 1
+  Direction: 2
 --- !u!114 &3922068971547025307
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 41.36363636363636
   BlockType: 1
-  Direction: 1
+  Direction: 2
 --- !u!114 &5079185546600591241
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 22.27272727272727
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &7260160030669975400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3648,7 +3648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 55.9090909090909
   BlockType: 1
-  Direction: 0
+  Direction: 2
 --- !u!114 &8180597799756755266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3693,7 +3693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Time: 44.99999999999999
   BlockType: 1
-  Direction: 1
+  Direction: 2
 --- !u!114 &8510809034131058136
 MonoBehaviour:
   m_ObjectHideFlags: 1
