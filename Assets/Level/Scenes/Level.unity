@@ -387,6 +387,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318175455}
     m_Modifications:
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292142591
+      objectReference: {fileID: 0}
     - target: {fileID: 2381391739294235106, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -477,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777378506041802946, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
@@ -559,6 +571,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318175455}
     m_Modifications:
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292142591
+      objectReference: {fileID: 0}
     - target: {fileID: 2381391739294235106, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -649,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777378506041802946, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
@@ -670,6 +694,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318175455}
     m_Modifications:
+    - target: {fileID: 2096317437063706529, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096317437063706529, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
     - target: {fileID: 5891246187826527237, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
       propertyPath: m_Name
       value: Tutorial03
@@ -677,6 +709,14 @@ PrefabInstance:
     - target: {fileID: 5891246187826527237, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362861981797183583, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362861981797183583, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
       objectReference: {fileID: 0}
     - target: {fileID: 8947926726103520184, guid: 032bdd8db495f4209b77cbf7a215573e, type: 3}
       propertyPath: m_Pivot.x
@@ -776,6 +816,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318175455}
     m_Modifications:
+    - target: {fileID: 4825146309441329538, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825146309441329538, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825146309441329538, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292142591
+      objectReference: {fileID: 0}
     - target: {fileID: 6465083463456491726, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
       propertyPath: m_Name
       value: Tutorial01
@@ -868,6 +920,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6615037437479855392, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615037437479855392, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615037437479855392, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4292142591
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd7af5e856f3248a29b63487122f5171, type: 3}
 --- !u!1001 &6758606017152302415
@@ -877,6 +941,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 318175455}
     m_Modifications:
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.83137256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675716736070107864, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
     - target: {fileID: 2381391739294235106, guid: fc757ed7da653433082aa6ddbd5c3ba4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
