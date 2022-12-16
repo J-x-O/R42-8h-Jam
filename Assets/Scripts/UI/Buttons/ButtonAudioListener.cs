@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UI.Buttons {
     
-    public class UIEventSoundListener : MonoBehaviour {
+    public class ButtonAudioListener : MonoBehaviour {
         
         [SerializeField] private SFXAudioEvent _uiHoverSfx;
     
