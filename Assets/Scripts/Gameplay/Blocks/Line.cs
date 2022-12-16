@@ -27,13 +27,13 @@ namespace Gameplay.Blocks {
             bool result = first.IsClickable();
             if (result) OnBlockClicked.TryInvoke(first);
             else OnBlockMissed.TryInvoke(first);
-            StopBlock(first);
+            StopBlock(first, result);
             return result;
         }
 
-        private void StopBlock(Block target) {
+        private void StopBlock(Block target, bool result = false) {
             _runningBlocks.Remove(target);
-            target.StopBlock();
+            target.StopBlock(result);
         }
         
         public void SentBlock(Block target) {

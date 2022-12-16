@@ -3,6 +3,7 @@ using System.Collections;
 using System.Security.Cryptography;
 using JescoDev.Utility.SmoothBrainTween.Plugins.Runtime.SmoothBrainTween;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Gameplay.Blocks {
     public class Block : MonoBehaviour {
@@ -34,9 +35,10 @@ namespace Gameplay.Blocks {
             onFinished.TryInvoke();
         }
 
-        public void StopBlock() {
+        public void StopBlock(bool result = false) {
             OnStop.TryInvoke();
-            Destroy(gameObject);
+            StopCoroutine(_routine);
+            StartCoroutine(FadeOutCoroutine(result));
         }
 
 
@@ -55,6 +57,27 @@ namespace Gameplay.Blocks {
 
         private void OnDestroy() {
             if(_routine != null) StopCoroutine(_routine);
+        }
+
+        private IEnumerator FadeOutCoroutine(bool result) {
+            Image image = GetComponent<Image>();
+            Color color = image.color;
+
+            RectTransform rect = GetComponent<RectTransform>();
+
+            float alpha = 1;
+            while (image.color.a > 0) {
+                alpha -= 10f * Time.deltaTime;
+                image.color = new Color(color.r, color.g, color.b, alpha);
+
+                if (result) {
+                    rect.localScale += Vector3.one * (2f * Time.deltaTime);
+                }
+                yield return null;
+            }
+            
+            Destroy(gameObject);
+            
         }
 
         
