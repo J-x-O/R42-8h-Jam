@@ -15,9 +15,11 @@ namespace Gameplay {
         public readonly ObservableBool Overheating = true;
         
         [SerializeField] private float _lowestValue;
+        public float LowestValue => _lowestValue;
         [SerializeField] private float _lowSweetSpot;
         [SerializeField] private float _highSweetSpot;
         [SerializeField] private float _highestValue;
+        public float HighestValue => _highestValue;
 
         public event Action OnDeath;
         public float Troubelometer { get; private set; }
@@ -52,6 +54,18 @@ namespace Gameplay {
                 yield return null;
             }
             _deathRoutine = null;
+        }
+
+        private void Update() {
+            if (Input.GetKey(KeyCode.A)) {
+                OnTooCold?.Invoke();
+            }
+            if (Input.GetKey(KeyCode.S)) {
+                OnTooHot?.Invoke();
+            }
+            if (Input.GetKey(KeyCode.D)) {
+                OnSweetSpotRestored?.Invoke();
+            }
         }
     }
 }

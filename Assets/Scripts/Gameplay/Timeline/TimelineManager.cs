@@ -5,10 +5,12 @@ using UnityEngine.Timeline;
 namespace Gameplay.Timeline {
     public class TimelineManager : MonoBehaviour {
 
+        public static TimelineAsset Map { get; set; }
+        
         [SerializeField] private PlayableDirector _director;
 
         private void Start() {
-            //if(_director.playableAsset is TimelineAsset
+            if(Map != null) _director.playableAsset = Map;
             _director.Play();
         }
     }

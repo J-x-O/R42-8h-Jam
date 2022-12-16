@@ -1,11 +1,18 @@
-﻿using UnityEngine;
+﻿using Gameplay.Timeline;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 namespace UI.MainMenu {
     public class MenuUtility : MonoBehaviour {
 
+        public void LoadLevel(TimelineAsset asset) {
+            TimelineManager.Map = asset;
+            SceneManager.LoadScene("Level", LoadSceneMode.Single);
+        }
+        
         public void LoadScene(string identifier) {
-            SceneManager.LoadScene(identifier, LoadSceneMode.Additive);
+            SceneManager.LoadScene(identifier, LoadSceneMode.Single);
         }
         
         public void QuitGame() {
