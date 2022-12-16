@@ -13,6 +13,11 @@ namespace Gameplay {
         public readonly ObservableBool SweetSpot = true;
         public readonly ObservableBool Freezing = true;
         public readonly ObservableBool Overheating = true;
+
+        [SerializeField, Range(0,1)] private float _FreezingThreshold;
+        [SerializeField, Range(0,1)] private float _ColdThreshold;
+        [SerializeField, Range(0,1)] private float _HotThreshold;
+        [SerializeField, Range(0,1)] private float _BurningThreshold;
         
         [SerializeField] private float _lowestValue;
         public float LowestValue => _lowestValue;
@@ -36,36 +41,12 @@ namespace Gameplay {
             SweetSpot.Set(IsInSweetSpot());
             Overheating.Set(IsOverheating());
             Freezing.Set(IsFreezing());
-            if (IsInTrouble() && _deathRoutine != null) StartCoroutine(DeathRoutine());
+            //if (IsInTrouble() && _deathRoutine != null) StartCoroutine(DeathRoutine());
         }
 
         private bool IsInSweetSpot() => Heat > _lowSweetSpot && Heat < _highSweetSpot;
         private bool IsInTrouble() => IsFreezing() || IsOverheating();
         private bool IsFreezing() => Heat < _lowestValue;
         private bool IsOverheating() => Heat > _highestValue;
-
-        private IEnumerator DeathRoutine() {
-            Troubelometer = 0;
-            while (Troubelometer >= 0) {
-                if (IsInTrouble()) Troubelometer += _troubleGainPerSecond * Time.deltaTime;
-                else Troubelometer -= _troubleDecayPerSecond * Time.deltaTime;
-                
-                if(Troubelometer > _troubleTolerance) OnDeath.TryInvoke();
-                yield return null;
-            }
-            _deathRoutine = null;
-        }
-
-        private void Update() {
-            if (Input.GetKey(KeyCode.A)) {
-                OnTooCold?.Invoke();
-            }
-            if (Input.GetKey(KeyCode.S)) {
-                OnTooHot?.Invoke();
-            }
-            if (Input.GetKey(KeyCode.D)) {
-                OnSweetSpotRestored?.Invoke();
-            }
-        }
     }
 }
