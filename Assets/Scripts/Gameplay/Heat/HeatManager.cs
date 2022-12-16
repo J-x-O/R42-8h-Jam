@@ -35,6 +35,14 @@ namespace Gameplay {
         public void HeatUp(float value) => SetHeat(Heat + value);
         public void Cooldown(float value) => SetHeat(Heat - value);
 
+        private void SetHeat(float newValue) {
+            Heat = Mathf.Clamp(newValue, _range.x, _range.y);
+            SweetSpot.Set(IsInSweetSpot());
+            Overheating.Set(IsOverheating());
+            Freezing.Set(IsFreezing());
+            if (IsInTrouble() && _deathRoutine == null) StartCoroutine(DeathRoutine());
+        }
+        
         private float ThresholdToValue(float threshold) {
             float width = _range.y - _range.x;
             return _range.x + width * threshold;
@@ -45,19 +53,10 @@ namespace Gameplay {
             return (value - _range.x) / width;
         }
 
-        private void SetHeat(float newValue) {
-            Heat = newValue;
-            SweetSpot.Set(IsInSweetSpot());
-            Overheating.Set(IsOverheating());
-            Freezing.Set(IsFreezing());
-            if (IsInTrouble() && _deathRoutine != null) StartCoroutine(DeathRoutine());
-        }
-
         private bool IsInSweetSpot() => HeatPercent > _ColdThreshold && HeatPercent < _HotThreshold;
         private bool IsInTrouble() => IsFreezing() || IsOverheating();
         private bool IsFreezing() => HeatPercent < _FreezingThreshold;
         private bool IsOverheating() => HeatPercent > _BurningThreshold;
-        private bool IsDead() => HeatPercent is > 0 and < 1;
 
         private IEnumerator DeathRoutine() {
             Troubelometer = 0;

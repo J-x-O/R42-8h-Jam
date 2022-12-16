@@ -15,4 +15,4 @@ MonoBehaviour:
   _clips:
   - {fileID: 8300000, guid: 2671e70d325d4a741a27bdbd176104fd, type: 3}
   _volume: {x: 1, y: 1}
-  _pitch: {x: 1, y: 1}
+  _pitch: {x: 0.9, y: 1.1}

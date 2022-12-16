@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+
+using UnityEditor;
 using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -15,3 +17,5 @@ namespace Gameplay.Timeline {
         }
     }
 }
+
+#endif

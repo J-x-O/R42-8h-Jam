@@ -5,6 +5,7 @@ using UnityEngine;
 namespace UI {
     public class ScoreDisplay : MonoBehaviour {
 
+        [SerializeField] private string _prefix = "Score: ";
         [SerializeField] private TMP_Text _text;
 
         private void OnEnable() {
@@ -17,7 +18,7 @@ namespace UI {
         }
         
         private void HandleBlockClick(int newValue) {
-            _text.text = "Score: " + newValue * 100;
+            _text.text = _prefix + newValue * 100;
         }
 
     }

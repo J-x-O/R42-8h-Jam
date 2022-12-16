@@ -20,6 +20,16 @@ namespace Gameplay.Blocks {
 
         private readonly List<Block> _runningBlocks = new();
 
+        private static event Action OnReset;
+
+        public static void ClearBlocks() {
+            OnReset.TryInvoke();
+        }
+
+        private void OnEnable() {
+            
+        }
+
         public bool Click() {
             OnAnyClick.TryInvoke();
             if (_runningBlocks.Count <= 0) return false;
