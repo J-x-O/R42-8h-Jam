@@ -18,7 +18,7 @@ namespace Gameplay {
         
         private void OnDisable() {
             foreach (Line line in _lines) {
-                line.OnAnyBlockDied += HandleBlockDeath;
+                line.OnAnyBlockDied -= HandleBlockDeath;
             }
         }
 

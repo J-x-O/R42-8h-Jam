@@ -1,7 +1,5 @@
 ﻿using Beta.Audio;
-using Gameplay.Timeline;
 using UnityEngine;
-using UnityEngine.Android;
 using UnityEngine.Timeline;
 
 namespace Gameplay {
