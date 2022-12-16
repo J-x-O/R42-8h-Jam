@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Hit
   m_EditorClassIdentifier: 
   _clips:
-  - {fileID: 8300000, guid: 2671e70d325d4a741a27bdbd176104fd, type: 3}
-  _volume: {x: 1, y: 1}
+  - {fileID: 8300000, guid: 4c6cfc9027c630f459440a0ff79f4690, type: 3}
+  _volume: {x: 3, y: 3}
   _pitch: {x: 1, y: 1}
