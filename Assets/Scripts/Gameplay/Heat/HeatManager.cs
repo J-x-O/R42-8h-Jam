@@ -5,10 +5,7 @@ using UnityEngine;
 
 namespace Gameplay {
     public class HeatManager : MonoBehaviour {
-        
-        public event Action OnSweetSpotRestored;
-        public event Action OnSweetSpotLost;
-        
+
         public float Heat { get; private set; }
         public float HeatPercent => ValueToThreshold(Heat);
         public readonly ObservableBool SweetSpot = false;

@@ -18,7 +18,7 @@ namespace UI {
         }
         
         private void HandleBlockClick(int newValue) {
-            _text.text = _prefix + newValue * 100;
+           _text.text = _prefix + newValue * 100;
         }
 
     }

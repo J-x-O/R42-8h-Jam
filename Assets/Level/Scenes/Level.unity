@@ -1269,7 +1269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _manager: {fileID: 841776986}
-  _data: {fileID: 11400000, guid: b864eea7bd113004b848f82358a4121c, type: 2}
   _lines:
   - {fileID: 1767798339}
   - {fileID: 1143657777}
@@ -1611,8 +1610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508e340969247ffaeb3f6659bdc7b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: b864eea7bd113004b848f82358a4121c, type: 2}
-  _manager: {fileID: 841776986}
   _start: {fileID: 1926697202}
   _middle: {fileID: 685395798}
   _end: {fileID: 817030401}
@@ -2005,8 +2002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508e340969247ffaeb3f6659bdc7b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: b864eea7bd113004b848f82358a4121c, type: 2}
-  _manager: {fileID: 841776986}
   _start: {fileID: 784239907}
   _middle: {fileID: 500212768}
   _end: {fileID: 1169643188}
@@ -2225,8 +2220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508e340969247ffaeb3f6659bdc7b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: b864eea7bd113004b848f82358a4121c, type: 2}
-  _manager: {fileID: 841776986}
   _start: {fileID: 618854385}
   _middle: {fileID: 1909796176}
   _end: {fileID: 247709223}
@@ -2771,7 +2764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1629021224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3143,8 +3136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508e340969247ffaeb3f6659bdc7b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _data: {fileID: 11400000, guid: b864eea7bd113004b848f82358a4121c, type: 2}
-  _manager: {fileID: 841776986}
   _start: {fileID: 1308551101}
   _middle: {fileID: 2118697154}
   _end: {fileID: 1083507466}

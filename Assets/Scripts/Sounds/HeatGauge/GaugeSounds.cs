@@ -18,13 +18,13 @@ namespace Sounds.HeatGauge {
         private void OnEnable() {
             _heatManager.Freezing.OnValueChanged += PlayFreeze;
             _heatManager.Overheating.OnValueChanged += PlayHeat;
-            _heatManager.OnSweetSpotRestored += PlaySweetspot;
+            _heatManager.SweetSpot.OnValueChanged += PlaySweetspot;
         }
 
         private void OnDisable() {
             _heatManager.Freezing.OnValueChanged -= PlayFreeze;
             _heatManager.Overheating.OnValueChanged -= PlayHeat;
-            _heatManager.OnSweetSpotRestored -= PlaySweetspot;
+            _heatManager.SweetSpot.OnValueChanged -= PlaySweetspot;
         }
 
         private void PlayFreeze(bool start) {
@@ -35,8 +35,8 @@ namespace Sounds.HeatGauge {
             if(start) _manager.PlaySFX(_heat);
         }
         
-        private void PlaySweetspot() {
-            _manager.PlaySFX(_sweetSpot);
+        private void PlaySweetspot(bool start) {
+            if(start) _manager.PlaySFX(_sweetSpot);
         }
     }
 

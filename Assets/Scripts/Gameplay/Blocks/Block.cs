@@ -44,7 +44,6 @@ namespace Gameplay.Blocks {
 
 
         public bool IsClickable() {
-            
             return IsBetween(Progress - AppearTime, - HitWindow / 2, + HitWindow / 2);
         }
 
